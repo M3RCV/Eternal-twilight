@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://q0etg4v4q7ja"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_r7snr"]
+[ext_resource type="Script" path="res://StartButton.gd" id="2_xd64a"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = -378.0
+offset_bottom = -152.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r7snr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -101.0
+offset_right = 70.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+script = ExtResource("2_xd64a")
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
