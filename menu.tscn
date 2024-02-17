@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://q0etg4v4q7ja"]
+[gd_scene load_steps=4 format=3 uid="uid://q0etg4v4q7ja"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_r7snr"]
+[ext_resource type="FontFile" uid="uid://1k85q4artt7u" path="res://Micro5-Regular.ttf" id="2_shkj1"]
 [ext_resource type="Script" path="res://StartButton.gd" id="2_xd64a"]
 
 [node name="Menu" type="Control"]
@@ -26,15 +27,29 @@ grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_shkj1")
+theme_override_font_sizes/font_size = 21
 text = "Start"
 script = ExtResource("2_xd64a")
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_shkj1")
+theme_override_font_sizes/font_size = 21
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_shkj1")
+theme_override_font_sizes/font_size = 21
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
