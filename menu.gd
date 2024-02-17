@@ -7,6 +7,11 @@ var buttons = []
 func _ready():
 	$VBoxContainer/StartButton.grab_focus()    #Устанавливаем фокус на элементе "StartButrton"
 	var vbox_container = $VBoxContainer  # Получаем доступ к VBox контейнеру кнопок
+	
+	
+
+	
+	
 
 #Заполняем массив "buttons" дочерними кнопками VBox контейнера
 	for child in vbox_container.get_children(): 
@@ -25,6 +30,7 @@ func _process(delta: float):
 		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
 
+	
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://Level0.tscn")
 

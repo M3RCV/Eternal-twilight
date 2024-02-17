@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://q0etg4v4q7ja"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_r7snr"]
-[ext_resource type="FontFile" uid="uid://1k85q4artt7u" path="res://Micro5-Regular.ttf" id="2_shkj1"]
+[ext_resource type="FontFile" uid="uid://1k85q4artt7u" path="res://font_menu.ttf" id="2_shkj1"]
 [ext_resource type="Script" path="res://StartButton.gd" id="2_xd64a"]
-[ext_resource type="PackedScene" uid="uid://cg7jfwat21h5v" path="res://bg.tscn" id="4_s3yfc"]
+[ext_resource type="PackedScene" uid="uid://cg7jfwat21h5v" path="res://background_menu.tscn" id="4_s3yfc"]
 
 [node name="Menu" type="Control"]
 texture_filter = 1
