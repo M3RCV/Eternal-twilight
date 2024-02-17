@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://q0etg4v4q7ja"]
+[gd_scene load_steps=5 format=3 uid="uid://q0etg4v4q7ja"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_r7snr"]
 [ext_resource type="FontFile" uid="uid://1k85q4artt7u" path="res://Micro5-Regular.ttf" id="2_shkj1"]
 [ext_resource type="Script" path="res://StartButton.gd" id="2_xd64a"]
+[ext_resource type="PackedScene" uid="uid://cg7jfwat21h5v" path="res://bg.tscn" id="4_s3yfc"]
 
 [node name="Menu" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -1.0
-offset_right = -378.0
-offset_bottom = -152.0
+offset_right = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r7snr")
@@ -21,36 +22,43 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -101.0
-offset_right = 70.0
+offset_left = 176.0
+offset_top = -260.0
+offset_right = 339.0
+offset_bottom = 90.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../QuitButton")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_shkj1")
-theme_override_font_sizes/font_size = 21
+theme_override_font_sizes/font_size = 40
 text = "Start"
 script = ExtResource("2_xd64a")
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_shkj1")
-theme_override_font_sizes/font_size = 21
+theme_override_font_sizes/font_size = 40
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
+theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_shkj1")
-theme_override_font_sizes/font_size = 21
+theme_override_font_sizes/font_size = 40
 text = "Quit"
+
+[node name="bg" parent="." instance=ExtResource("4_s3yfc")]
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
