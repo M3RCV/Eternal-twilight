@@ -1,34 +1,28 @@
 extends Control
 
+#Создаем переменную, индекса выбранной кнопки, а также массив кнопок
+var current_button_index = 0
+var buttons = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$VBoxContainer/StartButton.grab_focus()
-	
-	
-	
+	$VBoxContainer/StartButton.grab_focus()    #Устанавливаем фокус на элементе "StartButrton"
+	var vbox_container = $VBoxContainer  # Получаем доступ к VBox контейнеру кнопок
 
+#Заполняем массив "buttons" дочерними кнопками VBox контейнера
+	for child in vbox_container.get_children(): 
+		if child is Button:
+			buttons.append(child)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-func _on_key_pressed(event):
-	var children = get_children()
-	var current_index = children.index($VBoxContainer/StartButton)
+func _process(delta: float):
+#Обрабатываем срабатывание действия, вызванного нажатием кнопки "W"
+	if Input.is_action_just_pressed("ui_s-down"):
+		current_button_index = (current_button_index + 1) % buttons.size()    # Смещаем индекс выбранной кнопки на 1, и контролируем выход за пределы массива
+		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
-	# Переключиться на следующую кнопку
-	if event.key == KEY_D:
-		current_index += 1
-		if current_index >= children.size():
-			current_index = 0
-		children[current_index].grab_focus()
-
-	# Переключиться на предыдущую кнопку
-	elif event.key == KEY_A:
-		current_index -= 1
-		if current_index < 0:
-			current_index = children.size() - 1
-		children[current_index].grab_focus()
+#Обрабатываем срабатывание действия, вызванного нажатием кнопки "S"
+	if Input.is_action_just_pressed("ui_w-up"):
+		current_button_index = (current_button_index - 1) % buttons.size()    # Смещаем индекс выбранной кнопки на -1, и контролируем выход за пределы массива
+		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
 
 func _on_start_button_pressed():
