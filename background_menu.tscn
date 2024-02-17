@@ -10,6 +10,7 @@
 script = ExtResource("1_bsvqw")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(1920, 0)
 
 [node name="1" type="Sprite2D" parent="ParallaxLayer"]

@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://StartButton.gd" id="2_xd64a"]
 [ext_resource type="PackedScene" uid="uid://cg7jfwat21h5v" path="res://background_menu.tscn" id="4_s3yfc"]
 
-
 [node name="Menu" type="Control"]
 texture_filter = 1
 layout_mode = 3
