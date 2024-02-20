@@ -14,12 +14,12 @@ func _ready():
 
 func _process(delta: float):
 #Обрабатываем срабатывание действия, вызванного нажатием кнопки "W"
-	if Input.is_action_just_pressed("ui_s-down"):
+	if Input.is_action_just_pressed("s_down"):
 		current_button_index = (current_button_index + 1) % buttons.size()    # Смещаем индекс выбранной кнопки на 1, и контролируем выход за пределы массива
 		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
 #Обрабатываем срабатывание действия, вызванного нажатием кнопки "S"
-	if Input.is_action_just_pressed("ui_w-up"):
+	if Input.is_action_just_pressed("w_up"):
 		current_button_index = (current_button_index - 1) % buttons.size()    # Смещаем индекс выбранной кнопки на -1, и контролируем выход за пределы массива
 		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
