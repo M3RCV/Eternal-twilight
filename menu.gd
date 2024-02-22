@@ -24,7 +24,7 @@ func _process(delta: float):
 		buttons[current_button_index].grab_focus()    # Устанавливаем фокус на кнопке с новым индексом
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://Level0.tscn")
+	get_tree().change_scene_to_file("res://Level_0.tscn")
 
 
 func _on_quit_button_pressed():
