@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cerg5ofln8svr"]
 
-[ext_resource type="PackedScene" uid="uid://ckmibq6ftjnq5" path="res://Characners/main_character.tscn" id="1_outqa"]
+[ext_resource type="PackedScene" uid="uid://ckmibq6ftjnq5" path="res://Characners/main_character.tscn" id="1_lb3lx"]
 
 [node name="Level_0" type="Node2D"]
 
-[node name="Main_Character" parent="." instance=ExtResource("1_outqa")]
+[node name="Main_Character" parent="." instance=ExtResource("1_lb3lx")]
 position = Vector2(907, 529)
-scale = Vector2(4, 4)
