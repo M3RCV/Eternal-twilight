@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc83e85tn0c58"
-path="res://.godot/imported/DarkSamurai (64x64).png-807270c6e7770dd3a93778c8a7c1f20a.ctex"
+uid="uid://oe1km2kvni4s"
+path="res://.godot/imported/TX Tileset Grass.png-b26cd34d38b75059fd8df58ac4323142.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DarkSamurai (64x64).png"
-dest_files=["res://.godot/imported/DarkSamurai (64x64).png-807270c6e7770dd3a93778c8a7c1f20a.ctex"]
+source_file="res://Texture/TX Tileset Grass.png"
+dest_files=["res://.godot/imported/TX Tileset Grass.png-b26cd34d38b75059fd8df58ac4323142.ctex"]
 
 [params]
 
